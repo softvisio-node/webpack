@@ -5,7 +5,7 @@
 ## Install
 
 ```shell
-npm i @softvisio/vue
+npm i @softvisio/webpack
 ```
 
 ## Usage
