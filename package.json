@@ -28,6 +28,10 @@
         ".": "./lib/index.js",
         "./*": "./lib/*.js",
         "./connfigs/*": "./lib/configs/*/index.js",
+        "./loaders/*": [
+            "./lib/loaders/*.js",
+            "./lib/loaders/*.cjs"
+        ],
         "./resources/*": "./resources/*"
     },
     "bin": {
