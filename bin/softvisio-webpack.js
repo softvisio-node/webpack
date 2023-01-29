@@ -62,9 +62,9 @@ await CLI.parse( cli );
 const webpack = new Webpack( {
     "mode": process.cli.options.mode,
     "command": process.cli.arguments.command,
-    "analyzer": process.cli.options.analyzer,
-    "cache": process.cli.options.cache,
-    "cordova": process.cli.options.cordova,
+    "useAnalyzer": process.cli.options.analyzer,
+    "useCache": process.cli.options.cache,
+    "buildCordova": process.cli.options.cordova,
     "listen": process.cli.options.listen,
     "port": process.cli.options.port,
     "proxyUrl": process.cli.options["proxy-url"],
