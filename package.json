@@ -19,7 +19,6 @@
     "author": "zdm <zdm@softvisio.net>",
     "type": "module",
     "imports": {
-        "#configs/*": "./lib/configs/*/index.js",
         "#core/*": "@softvisio/core/*",
         "#lib/*": "./lib/*.js",
         "#resources/*": "./resources/*"
@@ -27,7 +26,7 @@
     "exports": {
         ".": "./lib/index.js",
         "./*": "./lib/*.js",
-        "./configs/*": "./lib/configs/*/index.js",
+        "./components/*": "./lib/components/*/index.js",
         "./loaders/*": [
             "./lib/loaders/*.js",
             "./lib/loaders/*.cjs"
