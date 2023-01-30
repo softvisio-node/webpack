@@ -26,12 +26,12 @@
     "exports": {
         ".": "./lib/index.js",
         "./*": "./lib/*.js",
-        "./components/*": "./lib/components/*/index.js",
         "./loaders/*": [
             "./lib/loaders/*.js",
             "./lib/loaders/*.cjs"
         ],
-        "./resources/*": "./resources/*"
+        "./resources/*": "./resources/*",
+        "./webpack-components/*": "./resources/webpack-components/*/index.js"
     },
     "bin": {
         "softvisio-webpack": "bin/softvisio-webpack.js"
