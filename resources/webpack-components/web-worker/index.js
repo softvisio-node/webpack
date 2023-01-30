@@ -8,49 +8,28 @@ import { TmpDir } from "#core/tmp";
 const DefinePlugin = webpack.DefinePlugin;
 
 export default class extends WebpackComponent {
-    #_tmpPath = new TmpDir();
+    #tmpPath = new TmpDir();
 
     // properties
     get buildLevel () {
         return 10;
     }
 
-    get isEnabled () {
-        if ( !super.isEnabled ) return false;
+    get tmpPath () {
+        this.#tmpPath ||= new TmpDir();
 
-        if ( this.isCordova ) return false;
-
-        if ( !this.appConfig.firebase?.web ) return false;
-
-        return true;
-    }
-
-    get schemas () {
-        return [
-
-            //
-            ...super.schemas,
-            new URL( "env.schema.yaml", import.meta.url ),
-        ];
+        return this.#tmpPath.path;
     }
 
     get entryImport () {
         throw `Entry import is required`;
     }
 
-    // protected
-    _init () {
-        super._init();
-
-        this.preprocessorParams.firebaseMessagingWorkerEnabled = this.isEnabled;
-
-        if ( this.isEnabled ) {
-            this.preprocessorParams.firebaseMessagingWorkerMixin = fs.existsSync( path.join( this.context, "src/firebase-messaging.worker.js" ) );
-
-            this.sharedResolveAlias["#firebaseMessagingWorker$"] = path.join( this.#tmpPath, "firebase-messaging.worker.js" );
-        }
+    get entryFilename () {
+        throw `Entry filename is required`;
     }
 
+    // protected
     _buildWebpackConfig ( options ) {
         return {
             "target": "webworker",
@@ -61,14 +40,14 @@ export default class extends WebpackComponent {
             "cache": this.cacheOptions,
 
             "entry": {
-                "firebase": {
+                "worker": {
                     "import": this.entryImport,
-                    "filename": "firebase-messaging.worker.js",
+                    "filename": this.entryFilename,
                 },
             },
 
             "output": {
-                "path": this.#tmpPath,
+                "path": this.tmpPath,
                 "publicPath": "auto",
             },
 
@@ -122,7 +101,7 @@ export default class extends WebpackComponent {
                         compiler.hooks.assetEmitted.tap( "run", ( file, info ) => {
 
                             // store to the tmp path
-                            if ( info.targetPath.startsWith( this.#tmpPath ) ) {
+                            if ( info.targetPath.startsWith( this.tmpPath ) ) {
                                 fs.mkdirSync( path.dirname( info.targetPath ), { "recursive": true } );
 
                                 fs.writeFileSync( info.targetPath, info.content );
@@ -136,10 +115,5 @@ export default class extends WebpackComponent {
                 } ),
             ],
         };
-    }
-
-    // private
-    get #tmpPath () {
-        return this.#_tmpPath.path;
     }
 }
