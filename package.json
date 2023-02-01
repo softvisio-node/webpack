@@ -24,7 +24,7 @@
         "#resources/*": "./resources/*"
     },
     "exports": {
-        ".": "./lib/index.js",
+        ".": "./lib/webpack.js",
         "./*": "./lib/*.js",
         "./loaders/*": [
             "./lib/loaders/*.js",
