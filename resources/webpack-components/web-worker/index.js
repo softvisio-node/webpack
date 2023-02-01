@@ -1,6 +1,5 @@
 import WebpackComponent from "#lib/component";
 import webpack from "webpack";
-import TerserPlugin from "terser-webpack-plugin";
 import fs from "node:fs";
 import path from "node:path";
 import { TmpDir } from "#core/tmp";
@@ -67,7 +66,7 @@ export default class extends WebpackComponent {
             "resolveLoader": { "modules": this.resolveLoaderModules },
 
             "optimization": {
-                "minimizer": [new TerserPlugin( this.terserOptions )],
+                "minimizer": [this.webpackTerserPlugin],
             },
 
             "module": {
