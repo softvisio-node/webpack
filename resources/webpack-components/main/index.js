@@ -133,7 +133,7 @@ export default class extends WebpackComponent {
                                 "use": [
                                     {
                                         "loader": "babel-loader",
-                                        "options": this.babelOptions,
+                                        "options": this.webpackBabelOptions,
                                     },
                                     {
                                         "loader": "webpack-preprocessor-loader",
