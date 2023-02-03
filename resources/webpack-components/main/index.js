@@ -62,7 +62,7 @@ export default class extends WebpackComponent {
                 "modules": this.webpackResolveModules,
             },
 
-            "resolveLoader": { "modules": this.resolveLoaderModules },
+            "resolveLoader": { "modules": this.webpackResolveLoaderModules },
 
             "optimization": {
                 "splitChunks": {
