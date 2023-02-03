@@ -85,7 +85,7 @@ export default class extends WebpackComponent {
                             },
                             {
                                 "loader": "webpack-preprocessor-loader",
-                                "options": options.preprocessorOptions,
+                                "options": this.webpackPreprocessorOptions,
                             },
                         ],
                     },
