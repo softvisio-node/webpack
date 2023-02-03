@@ -50,7 +50,7 @@ export default class extends WebpackComponent {
             },
 
             "resolve": {
-                "alias": this.resolveAlias,
+                "alias": this.webpackResolveAlias,
 
                 // required by froala, can be replaced with crypto-browserify
                 "fallback": {
