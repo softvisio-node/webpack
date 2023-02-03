@@ -36,7 +36,7 @@ export default class extends WebpackComponent {
             "context": this.context,
             "devtool": this.isDevelopment ? "eval-source-map" : undefined,
             "experiments": { "topLevelAwait": true },
-            "cache": this.cacheOptions,
+            "cache": this.webpackCacheOptions,
 
             "entry": {
                 "worker": {
