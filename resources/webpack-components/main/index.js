@@ -59,7 +59,7 @@ export default class extends WebpackComponent {
 
                 "extensions": [".mjs", ".js", ".jsx", ".vue", ".json", ".wasm", ".po", ".yaml"],
 
-                "modules": this.resolveModules,
+                "modules": this.webpackResolveModules,
             },
 
             "resolveLoader": { "modules": this.resolveLoaderModules },
