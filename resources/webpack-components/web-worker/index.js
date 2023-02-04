@@ -18,12 +18,12 @@ export default class extends WebpackComponent {
         return this.#tmpPath.path;
     }
 
-    get entryImport () {
-        throw `Entry import is required`;
+    get webpackEntryImport () {
+        throw `webpackEntryImport is required`;
     }
 
-    get entryFilename () {
-        throw `Entry filename is required`;
+    get webpackEntryFilename () {
+        throw `webpackEntryFilename is required`;
     }
 
     // protected
@@ -38,8 +38,8 @@ export default class extends WebpackComponent {
 
             "entry": {
                 "worker": {
-                    "import": this.entryImport,
-                    "filename": this.entryFilename,
+                    "import": this.webpackEntryImport,
+                    "filename": this.webpackEntryFilename,
                 },
             },
 
