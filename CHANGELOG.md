@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.12 (2023-02-04)
+
+Fixes:
+
+-   fix: devserver log
+
 ### 1.0.11 (2023-02-04)
 
 Fixes:
