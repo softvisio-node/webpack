@@ -4,8 +4,6 @@ import fs from "node:fs";
 import path from "node:path";
 import { TmpDir } from "#core/tmp";
 
-const DefinePlugin = webpack.DefinePlugin;
-
 export default class extends WebpackComponent {
     #tmpPath = new TmpDir();
 
@@ -108,9 +106,9 @@ export default class extends WebpackComponent {
                         } );
                     },
                 },
-                new DefinePlugin( {
-                    "process.env": this.appEnvJson,
-                    "process._APP_CONFIG_PLACEHOLDER": this.appConfigJson,
+                new webpack.DefinePlugin( {
+                    "process.env": this.webpackProcessEnv,
+                    "process._APP_CONFIG_PLACEHOLDER": this.webpackAppConfig,
                 } ),
             ],
         };

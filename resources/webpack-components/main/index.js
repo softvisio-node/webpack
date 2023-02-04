@@ -8,8 +8,6 @@ import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import PoFile from "#core/locale/po-file";
 import { parseJsonConfig, parseYamlConfig } from "#core/config";
 
-const DefinePlugin = webpack.DefinePlugin;
-
 export default class extends WebpackComponent {
 
     // properties
@@ -264,17 +262,17 @@ export default class extends WebpackComponent {
                     "chunkFilename": "css/[name].[contenthash].css",
                 } ),
 
-                new DefinePlugin( {
+                new webpack.DefinePlugin( {
                     "__VUE_OPTIONS_API__": "true",
                     "__VUE_PROD_DEVTOOLS__": "false",
-                    "process.env": this.appEnvJson,
-                    "process._APP_CONFIG_PLACEHOLDER": this.appConfigJson,
+                    "process.env": this.webpackProcessEnv,
+                    "process._APP_CONFIG_PLACEHOLDER": this.webpackAppConfig,
                 } ),
 
                 new HtmlPlugin( {
                     "scriptLoading": "defer",
                     "template": "public/index.html",
-                    "templateParameters": this.templateParams,
+                    "templateParameters": this.webpackTemplateParams,
                 } ),
 
                 new CopyPlugin( {
