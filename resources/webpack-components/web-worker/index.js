@@ -29,7 +29,7 @@ export default class extends WebpackComponent {
     }
 
     // protected
-    _buildWebpackConfig ( options ) {
+    _buildWebpackConfig () {
         return {
             "target": "webworker",
             "mode": this.mode,
@@ -109,8 +109,8 @@ export default class extends WebpackComponent {
                     },
                 },
                 new DefinePlugin( {
-                    "process.env": options.appEnv,
-                    "process._APP_CONFIG_PLACEHOLDER": options.appConfig,
+                    "process.env": this.appEnvJson,
+                    "process._APP_CONFIG_PLACEHOLDER": this.appConfigJson,
                 } ),
             ],
         };

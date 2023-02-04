@@ -27,7 +27,7 @@ export default class extends WebpackComponent {
     }
 
     // protected
-    _buildWebpackConfig ( options ) {
+    _buildWebpackConfig () {
         return {
 
             // "target": "web", "browserslist",
@@ -267,14 +267,14 @@ export default class extends WebpackComponent {
                 new DefinePlugin( {
                     "__VUE_OPTIONS_API__": "true",
                     "__VUE_PROD_DEVTOOLS__": "false",
-                    "process.env": options.appEnv,
-                    "process._APP_CONFIG_PLACEHOLDER": options.appConfig,
+                    "process.env": this.appEnvJson,
+                    "process._APP_CONFIG_PLACEHOLDER": this.appConfigJson,
                 } ),
 
                 new HtmlPlugin( {
                     "scriptLoading": "defer",
                     "template": "public/index.html",
-                    "templateParameters": options.templateParams,
+                    "templateParameters": this.templateParams,
                 } ),
 
                 new CopyPlugin( {
