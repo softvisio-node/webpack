@@ -12,8 +12,8 @@ const DefinePlugin = webpack.DefinePlugin;
 
 export default class extends WebpackComponent {
 
-    // static
-    static get schemas () {
+    // properties
+    get schemas () {
         return [
 
             //
@@ -22,7 +22,6 @@ export default class extends WebpackComponent {
         ];
     }
 
-    // properties
     get isEnabled () {
         return super.isEnabled;
     }
