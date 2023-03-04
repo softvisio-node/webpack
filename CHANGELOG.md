@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.13 (2023-03-04)
+
+Fixes:
+
+-   fix: cache options
+
 ### 1.0.12 (2023-02-04)
 
 Fixes:
