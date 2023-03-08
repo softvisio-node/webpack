@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.16 (2023-03-08)
+
+Fixes:
+
+-   fix: fix cache build deps
+
 ### 1.0.15 (2023-03-08)
 
 Fixes:
