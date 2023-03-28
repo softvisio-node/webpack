@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.18 (2023-03-28)
+
+Fixes:
+
+-   fix: preprocessor options
+
 ### 1.0.17 (2023-03-25)
 
 Fixes:
