@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.20 (2023-05-01)
+
+Fixes:
+
+-   fix: build log
+
 ### 1.0.19 (2023-04-07)
 
 Fixes:
