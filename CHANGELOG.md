@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.0.21 (2023-05-11)
+
+Fixes:
+
+-   fix: cache build dependencies
+-   fix: log
+
 ### 1.0.20 (2023-05-01)
 
 Fixes:
