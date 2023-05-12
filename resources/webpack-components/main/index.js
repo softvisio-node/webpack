@@ -11,17 +11,13 @@ import { parseJsonConfig, parseYamlConfig } from "#core/config";
 export default class extends WebpackComponent {
 
     // properties
-    get schemas () {
-        return [
-
-            //
-            ...super.schemas,
-            new URL( "env.schema.yaml", import.meta.url ),
-        ];
-    }
-
     get isEnabled () {
         return super.isEnabled;
+    }
+
+    // public
+    validateEnv ( env ) {
+        return super.validateEnv( env ) || this._validateEnv( env, import.meta.url );
     }
 
     // protected

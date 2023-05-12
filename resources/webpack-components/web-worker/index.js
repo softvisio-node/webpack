@@ -26,6 +26,11 @@ export default class extends WebpackComponent {
         throw `webpackEntryFilename is required`;
     }
 
+    // public
+    validateEnv ( env ) {
+        return super.validateEnv( env ) || this._validateEnv( env, import.meta.url );
+    }
+
     // protected
     _buildWebpackConfig () {
         return {
