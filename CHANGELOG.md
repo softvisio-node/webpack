@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.23 (2023-05-31)
+
+Fixes:
+
+-   fix: locales
+
 ### 1.0.22 (2023-05-12)
 
 Fixes:
