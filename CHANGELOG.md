@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.25 (2023-06-05)
+
+Fixes:
+
+-   fix: localization
+
 ### 1.0.24 (2023-06-04)
 
 Fixes:
