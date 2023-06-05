@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.26 (2023-06-05)
+
+Fixes:
+
+-   fix: convig validation
+
 ### 1.0.25 (2023-06-05)
 
 Fixes:
