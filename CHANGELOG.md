@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.28 (2023-06-06)
+
+Fixes:
+
+-   fix: configs
+
 ### 1.0.27 (2023-06-06)
 
 Fixes:
