@@ -1,0 +1,29 @@
+- $id: env
+  type: object
+  properties: {}
+  required: []
+
+- $id: config
+  type: object
+  properties:
+    build:
+      anyOf:
+        - type: "null"
+        - type: object
+          properties:
+            webpackDevServer:
+              anyOf:
+                - type: "null"
+                - type: object
+                  properties:
+                    proxyUrl: { type: string, format: uri }
+
+                  additionalProperties: false
+                  required: []
+
+          required: []
+
+    config: { type: ["null", object] }
+
+  additionalProperties: false
+  required: []

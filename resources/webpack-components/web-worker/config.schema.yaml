@@ -1,0 +1,21 @@
+- $id: env
+  type: object
+  properties: {}
+  required: []
+
+- $id: config
+  type: object
+  properties:
+    build:
+      type: object
+      properties: {}
+
+      required: []
+
+    config:
+      type: object
+      properties: {}
+
+      required: []
+
+  required: [build, config]
