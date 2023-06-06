@@ -3,19 +3,13 @@
   properties: {}
   required: []
 
-- $id: config
+- $id: build
   type: object
-  properties:
-    build:
-      type: object
-      properties: {}
+  properties: {}
+  required: []
 
-      required: []
-
-    config:
-      type: object
-      properties: {}
-
-      required: []
-
-  required: [build, config]
+- $id: config
+  config:
+    type: object
+    properties: {}
+    required: []

@@ -3,36 +3,31 @@
   properties: {}
   required: []
 
+- $id: build
+  type: object
+  properties: {}
+  required: []
+
 - $id: config
+  config:
   type: object
   properties:
-    build:
-      type: object
-      properties: {}
+    title: { type: string }
+    titleIcon: { type: string }
 
-      required: []
+    apiUrl: { type: string, format: uri-reference }
 
-    config:
+    signupEnabled: { type: boolean }
+
+    locales: { type: array, items: { type: string } }
+
+    pushNotifications:
       type: object
       properties:
-        title: { type: string }
-        titleIcon: { type: string }
+        guestEnabled: { type: boolean }
+        userEnabled: { type: boolean }
 
-        apiUrl: { type: string, format: uri-reference }
+      additionalProperties: false
+      required: [guestEnabled, userEnabled]
 
-        signupEnabled: { type: boolean }
-
-        locales: { type: array, items: { type: string } }
-
-        pushNotifications:
-          type: object
-          properties:
-            guestEnabled: { type: boolean }
-            userEnabled: { type: boolean }
-
-          additionalProperties: false
-          required: [guestEnabled, userEnabled]
-
-      required: [title, signupEnabled]
-
-  required: [build, config]
+  required: [title, signupEnabled]
