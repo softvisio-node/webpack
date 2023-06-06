@@ -1,9 +1,9 @@
-- id: env
+- $id: env
   type: object
   properties: {}
   required: []
 
-- id: config
+- $id: config
   type: object
   properties:
     build:
