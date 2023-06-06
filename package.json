@@ -31,7 +31,7 @@
             "./lib/loaders/*.cjs"
         ],
         "./resources/*": "./resources/*",
-        "./webpack-components/*": "./resources/webpack-components/*/index.js"
+        "./webpack-components/*": "./resources/webpack-components/*/component.js"
     },
     "bin": {
         "softvisio-webpack": "bin/softvisio-webpack.js"
