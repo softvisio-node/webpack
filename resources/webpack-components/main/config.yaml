@@ -1,7 +1,5 @@
-env:
+env: ~
 
-build:
+build: ~
 
-config:
-  apiUrl: /api/
-  signupEnabled: true
+config: ~
