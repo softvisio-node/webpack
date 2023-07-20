@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.32 (2023-07-20)
+
+Fixes:
+
+-   fix: overlay in ptoduction
+
 ### 1.0.31 (2023-07-16)
 
 Fixes:
