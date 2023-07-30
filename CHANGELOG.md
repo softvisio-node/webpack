@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.34 (2023-07-30)
+
+Fixes:
+
+-   fix: config validation
+
 ### 1.0.33 (2023-07-30)
 
 Fixes:
