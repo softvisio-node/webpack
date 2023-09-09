@@ -7,7 +7,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import PoFile from "#core/locale/po-file";
 import { parseJson } from "#core/config";
-import { yaml } from "#core/yaml";
+import yaml from "#core/yaml";
 
 export default class extends WebpackComponent {
 
