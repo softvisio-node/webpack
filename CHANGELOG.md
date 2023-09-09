@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.0.35 (2023-09-09)
+
+Fixes:
+
+-   fix: yaml parse
+-   fix: yaml parser
+
 ### 1.0.34 (2023-07-30)
 
 Fixes:
