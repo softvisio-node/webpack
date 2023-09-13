@@ -6,7 +6,7 @@ import CopyPlugin from "copy-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import PoFile from "#core/locale/po-file";
-import json5 from "#lib/json5";
+import json5 from "#core/json5";
 import yaml from "#core/yaml";
 
 export default class extends WebpackComponent {
