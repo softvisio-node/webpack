@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.37 (2023-09-13)
+
+Fixes:
+
+-   fix: json5 import
+
 ### 1.0.36 (2023-09-13)
 
 Fixes:
