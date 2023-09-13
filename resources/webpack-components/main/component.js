@@ -6,7 +6,7 @@ import CopyPlugin from "copy-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
 import PoFile from "#core/locale/po-file";
-import { parseJson } from "#core/config";
+import json5 from "#lib/json5";
 import yaml from "#core/yaml";
 
 export default class extends WebpackComponent {
@@ -239,7 +239,7 @@ export default class extends WebpackComponent {
                     {
                         "test": /\.json$/,
                         "loader": "@softvisio/webpack/loaders/json",
-                        "options": { parseJson },
+                        "options": { json5 },
                     },
 
                     // .yaml
