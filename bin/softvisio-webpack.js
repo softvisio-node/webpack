@@ -43,7 +43,7 @@ const cli = {
             "schema": { "type": "number", "format": "ip-port" },
         },
         "proxy-url": {
-            "short": null,
+            "short": false,
             "description": `Proxy URL.`,
             "schema": { "type": "string", "format": "uri" },
         },
