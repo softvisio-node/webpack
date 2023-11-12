@@ -36,10 +36,16 @@ const cli = {
             "default": "0.0.0.0",
             "schema": { "type": "string", "format": "ip-address" },
         },
-        "port": {
+        "http-port": {
             "short": "p",
-            "description": `Development server listen IP port.`,
+            "description": `HTTP development server listen IP port.`,
             "default": 80,
+            "schema": { "type": "number", "format": "ip-port" },
+        },
+        "https-port": {
+            "short": "P",
+            "description": `HTTPS development server listen IP port.`,
+            "default": 443,
             "schema": { "type": "number", "format": "ip-port" },
         },
         "proxy-url": {
@@ -66,7 +72,8 @@ const webpack = new Webpack( {
     "useCache": process.cli.options.cache,
     "buildCordova": process.cli.options.cordova,
     "listen": process.cli.options.listen,
-    "port": process.cli.options.port,
+    "httpPort": process.cli.options["http-port"],
+    "httpsPort": process.cli.options["https-port"],
     "proxyUrl": process.cli.options["proxy-url"],
 } );
 
