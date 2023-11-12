@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.40 (2023-11-12)
+
+Fixes:
+
+-   fix: dev server https
+
 ### 1.0.39 (2023-10-20)
 
 Fixes:
