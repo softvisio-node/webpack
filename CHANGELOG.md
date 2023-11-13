@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.41 (2023-11-13)
+
+Fixes:
+
+-   fix: dev server
+
 ### 1.0.40 (2023-11-12)
 
 Fixes:
