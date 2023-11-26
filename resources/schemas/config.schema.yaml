@@ -14,6 +14,8 @@
             - type: object
               properties:
                 proxyUrl: { type: string, format: uri }
+                cert: { type: ["null", string] }
+                key: { type: ["null", string] }
 
               additionalProperties: false
               required: []
