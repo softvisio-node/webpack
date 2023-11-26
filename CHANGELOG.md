@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.42 (2023-11-26)
+
+Fixes:
+
+-   fix: ssl cert
+
 ### 1.0.41 (2023-11-13)
 
 Fixes:
