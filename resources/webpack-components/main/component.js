@@ -116,7 +116,8 @@ export default class extends WebpackComponent {
 
                             // web workers *.worker.js
                             {
-                                "test": /\.worker\.js$/,
+                                "test": /\.worker\.[cm]?js$/,
+
                                 "type": "asset/resource",
                                 "generator": {
                                     "filename": "[name].[hash][ext][query]",
