@@ -40,13 +40,13 @@ const cli = {
             "short": "p",
             "description": `HTTP development server listen IP port.`,
             "default": 80,
-            "schema": { "type": "number", "format": "ip-port" },
+            "schema": { "type": "integer", "format": "ip-port" },
         },
         "https-port": {
             "short": "P",
             "description": `HTTPS development server listen IP port.`,
             "default": 443,
-            "schema": { "type": "number", "format": "ip-port" },
+            "schema": { "type": "integer", "format": "ip-port" },
         },
         "proxy-url": {
             "short": false,
