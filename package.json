@@ -42,6 +42,9 @@
         "/resources",
         "/src"
     ],
+    "scripts": {
+        "update-certificates": "node bin/update-certificates.js"
+    },
     "peerDependencies": {
         "@babel/core": "^7.15.5",
         "@babel/plugin-transform-runtime": "^7.15.8",
