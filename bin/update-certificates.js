@@ -51,9 +51,6 @@ console.log( res + "" );
 
 if ( !res.ok ) process.exit( 1 );
 
-// XXX store cert
-console.log( res );
-
 async function createChallenge ( { type, domain, dnsTxtRecordName, httpLocation, token, content } ) {
     if ( type !== "dns-01" ) return false;
 
