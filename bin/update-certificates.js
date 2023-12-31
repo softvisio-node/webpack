@@ -3,6 +3,9 @@
 import env from "#core/env";
 import Acme from "#core/api/acme";
 import Cloudflare from "#core/api/cloudflare";
+import fs from "node:fs";
+
+const DOMAIN = "local.softvisio.net";
 
 env.loadUserEnv();
 
@@ -29,16 +32,24 @@ const acme = new Acme( {
 } );
 
 const res = await acme.getCertificate( {
-    "domains": "local.softvisio.net",
+    "domains": DOMAIN,
     "createChallenge": createChallenge,
     "deleteChallenge": deleteChallenge,
 } );
 
-if ( !res.ok ) {
-    console.log( res + "" );
+if ( res.ok ) {
+    const path = env.root + "/resources/" + DOMAIN;
 
-    process.exit( 1 );
+    fs.mkdirSync( path, { "recursive": true } );
+
+    fs.writeFileSync( path + "/crt.pem", res.data.certificate );
+
+    fs.writeFileSync( path + "/key.pem", res.data.key );
 }
+
+console.log( res + "" );
+
+if ( !res.ok ) process.exit( 1 );
 
 // XXX store cert
 console.log( res );
