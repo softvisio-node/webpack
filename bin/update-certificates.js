@@ -28,7 +28,8 @@ const acme = new Acme( {
     "accountKey": null,
 } );
 
-const res = await acme.getCertificate( "local.softvisio.net", {
+const res = await acme.getCertificate( {
+    "domains": "local.softvisio.net",
     "createChallenge": createChallenge,
     "deleteChallenge": deleteChallenge,
 } );
@@ -38,6 +39,9 @@ if ( !res.ok ) {
 
     process.exit( 1 );
 }
+
+// XXX store cert
+console.log( res );
 
 async function createChallenge ( { type, domain, dnsTxtRecordName, httpLocation, token, content } ) {
     if ( type !== "dns-01" ) return false;
