@@ -26,7 +26,7 @@ if ( !cloudflareApi ) {
 
 const acme = new Acme( {
     "provider": "letsencrypt",
-    "test": true,
+    "test": false,
     "email": "zdm@softvisio.net",
     "accountKey": null,
 } );
