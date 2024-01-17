@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.53 (2024-01-17)
+
+Fixes:
+
+-   fix: certificates
+
 ### 1.0.52 (2024-01-10)
 
 Fixes:
