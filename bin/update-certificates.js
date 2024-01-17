@@ -44,7 +44,7 @@ if ( res.ok ) {
 
     fs.writeFileSync( path + "/crt.pem", res.data.certificate );
 
-    fs.writeFileSync( path + "/key.pem", res.data.key );
+    fs.writeFileSync( path + "/key.pem", res.data.privateKey );
 }
 
 console.log( res + "" );
