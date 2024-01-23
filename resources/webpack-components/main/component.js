@@ -52,7 +52,7 @@ export default class extends WebpackComponent {
                     "crypto": false,
                 },
 
-                "extensions": [".mjs", ".js", ".jsx", ".vue", ".json", ".wasm", ".po", ".yaml"],
+                "extensions": [ ".mjs", ".js", ".jsx", ".vue", ".json", ".wasm", ".po", ".yaml" ],
 
                 "modules": this.webpackResolveModules,
             },
@@ -220,7 +220,7 @@ export default class extends WebpackComponent {
                                     "postcssOptions": {
                                         "plugins": {
                                             "cssnano": {
-                                                "preset": ["default", { "normalizeWhitespace": false }],
+                                                "preset": [ "default", { "normalizeWhitespace": false } ],
                                             },
                                         },
                                     },
@@ -278,7 +278,7 @@ export default class extends WebpackComponent {
                         {
                             "from": "public",
                             "globOptions": {
-                                "ignore": ["**/index.html"],
+                                "ignore": [ "**/index.html" ],
                             },
                         },
                     ],

@@ -61,7 +61,7 @@ export default class extends WebpackComponent {
                     "crypto": false,
                 },
 
-                "extensions": [".mjs", ".js", ".jsx", ".vue", ".json", ".wasm"],
+                "extensions": [ ".mjs", ".js", ".jsx", ".vue", ".json", ".wasm" ],
 
                 "modules": this.webpackResolveModules,
             },
@@ -69,7 +69,7 @@ export default class extends WebpackComponent {
             "resolveLoader": { "modules": this.webpackResolveLoaderModules },
 
             "optimization": {
-                "minimizer": [this.webpackTerserPlugin],
+                "minimizer": [ this.webpackTerserPlugin ],
             },
 
             "module": {

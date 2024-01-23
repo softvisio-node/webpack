@@ -9,7 +9,7 @@ const cli = {
         "mode": {
             "short": "m",
             "description": `can be "development" or "production"`,
-            "schema": { "type": "string", "enum": ["development", "production"] },
+            "schema": { "type": "string", "enum": [ "development", "production" ] },
         },
         "cordova": {
             "short": "c",
@@ -58,7 +58,7 @@ const cli = {
         "command": {
             "description": `One of: "dev", "build", "dump"`,
             "required": true,
-            "schema": { "type": "string", "enum": ["dev", "build", "dump"] },
+            "schema": { "type": "string", "enum": [ "dev", "build", "dump" ] },
         },
     },
 };

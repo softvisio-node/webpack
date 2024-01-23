@@ -100,7 +100,7 @@ async function getDomainZone ( domain ) {
         }
     }
 
-    return result( [404, `Domain zone not found`] );
+    return result( [ 404, `Domain zone not found` ] );
 }
 
 async function deleteDnsRecord ( dnsTxtRecordName, zone ) {
