@@ -72,9 +72,9 @@ const webpack = new Webpack( {
     "useCache": process.cli.options.cache,
     "buildCordova": process.cli.options.cordova,
     "listen": process.cli.options.listen,
-    "httpPort": process.cli.options["http-port"],
-    "httpsPort": process.cli.options["https-port"],
-    "proxyUrl": process.cli.options["proxy-url"],
+    "httpPort": process.cli.options[ "http-port" ],
+    "httpsPort": process.cli.options[ "https-port" ],
+    "proxyUrl": process.cli.options[ "proxy-url" ],
 } );
 
 webpack.run();

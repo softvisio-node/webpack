@@ -95,7 +95,7 @@ async function getDomainZone ( domain ) {
     if ( !res.ok ) return;
 
     for ( const zone of res.data ) {
-        if ( domain === zone.name || domain.endsWith( `.${zone.name}` ) ) {
+        if ( domain === zone.name || domain.endsWith( `.${ zone.name }` ) ) {
             return result( 200, zone );
         }
     }
