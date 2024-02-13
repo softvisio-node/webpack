@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.56 (2024-02-13)
+
+Fixes:
+
+-   fix: webpack-dev-server
+
 ### 1.0.55 (2024-01-24)
 
 Fixes:
