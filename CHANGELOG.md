@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.59 (2024-04-17)
+
+Fixes:
+
+-   fix: dev cert update
+
 ### 1.0.58 (2024-04-15)
 
 Fixes:
