@@ -1,6 +1,6 @@
 {
     "name": "@softvisio/webpack",
-    "version": "1.0.60",
+    "version": "1.0.61",
     "description": "Webpack wrapper",
     "keywords": [
         "softvisio",
