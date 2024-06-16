@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.62 (2024-06-16)
+
+Fixes:
+
+-   fix: vue flags
+
 ### 1.0.61 (2024-05-29)
 
 Fixes:
