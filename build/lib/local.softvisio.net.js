@@ -114,7 +114,7 @@ export default class Datasets extends ExternalResourceBuilder {
 
     async #getDomainZone ( domain ) {
         const res = await cloudflareApi.getZones();
-        if ( !res.ok ) return;
+        if ( !res.ok ) return res;
 
         for ( const zone of res.data ) {
             if ( domain === zone.name || domain.endsWith( `.${ zone.name }` ) ) {
