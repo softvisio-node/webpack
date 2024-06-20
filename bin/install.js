@@ -3,7 +3,7 @@
 import externalResources from "#core/external-resources";
 
 externalResources.add( {
-    "id": "softvisio-node/webpack/resources/certificates",
+    "id": "softvisio-node/webpack/resources/local.softvisio.net",
     "node": true,
 } );
 
