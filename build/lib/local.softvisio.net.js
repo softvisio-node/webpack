@@ -11,7 +11,7 @@ export default class Datasets extends ExternalResourceBuilder {
 
     // properties
     get id () {
-        return "zerocluster/datasets/resources/datasets";
+        return "softvisio-node/webpack/resources/local.softvisio.net";
     }
 
     // protected
