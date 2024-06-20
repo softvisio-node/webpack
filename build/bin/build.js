@@ -2,8 +2,7 @@
 
 import Cli from "#core/cli";
 import ExternalResourceBuilder from "#core/external-resource-builder";
-import CountriesGeoJson from "#lib/countries.geo.json";
-import Datasets from "#lib/datasets";
+import LocalSoftvisioNet from "#lib/local.softvisio.net";
 
 const CLI = {
     "title": "Update resources",
@@ -24,8 +23,7 @@ const res = await ExternalResourceBuilder.build(
     [
 
         //
-        CountriesGeoJson,
-        Datasets,
+        LocalSoftvisioNet,
     ],
     { "force": process.cli.options.force }
 );
