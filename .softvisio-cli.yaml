@@ -1,3 +1,6 @@
+subPackages:
+  - build
+
 docs:
   location: docs
 

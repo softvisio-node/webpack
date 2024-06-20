@@ -43,8 +43,7 @@
         "/src"
     ],
     "scripts": {
-        "install": "node bin/install.js",
-        "update-certificates": "node bin/update-certificates.js"
+        "install": "node bin/install.js"
     },
     "peerDependencies": {
         "@babel/core": "^7.15.5",
