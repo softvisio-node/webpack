@@ -1,13 +1,24 @@
 import ExternalResourceBuilder from "#core/external-resource-builder";
-import url from "node:url";
-import sql from "#core/sql";
 import fs from "node:fs";
-import { readConfig } from "#core/config";
+import env from "#core/env";
+import Acme from "#core/api/acme";
+import Cloudflare from "#core/api/cloudflare";
 
-const SOURCE_PATH = url.fileURLToPath( new URL( "../resources", import.meta.url ) );
-const SOURCES = [ "continent", "country", "currency", "language", "timezone" ];
+const DOMAIN = "local.softvisio.net";
+
+env.loadUserEnv();
+
+var cloudflareApi;
+
+if ( process.env.CLOUDFLARE_KEY && process.env.CLOUDFLARE_EMAIL ) {
+    cloudflareApi = new Cloudflare( process.env.CLOUDFLARE_KEY, process.env.CLOUDFLARE_EMAIL );
+}
+else if ( process.env.CLOUDFLARE_TOKEN ) {
+    cloudflareApi = new Cloudflare( process.env.CLOUDFLARE_TOKEN );
+}
 
 export default class Datasets extends ExternalResourceBuilder {
+    #res;
 
     // properties
     get id () {
@@ -16,105 +27,120 @@ export default class Datasets extends ExternalResourceBuilder {
 
     // protected
     async _getEtag () {
+        const res = await this.#getCertificates();
+        if ( !res.ok ) return res;
+
         const hash = this._getHash();
 
-        for ( const source of SOURCES ) {
-            const sourcePath = SOURCE_PATH + "/" + source + ".json";
-
-            if ( !fs.existsSync( sourcePath ) ) return result( [ 404, `Source "${ source }" not found` ] );
-
-            const json = readConfig( sourcePath );
-
-            hash.update( JSON.stringify( json ) );
-        }
+        hash.update( res.data.certificate );
+        hash.update( res.data.privateKey );
 
         return result( 200, hash );
     }
 
     async _build ( location ) {
-        const dbh = await sql.new( url.pathToFileURL( location + "/datasets.sqlite" ) );
+        const res = await this.#getCertificates();
+        if ( !res.ok ) return res;
 
-        dbh.exec( sql`
+        fs.writeFileSync( location + "/key.pem", res.data.privateKey );
 
--- continent
-CREATE TABLE continent (
-    id text PRiMARY KEY NOT NULL COLLATE NOCASE, -- iso2
-    iso2 text NOT NULL COLLATE NOCASE,
-    name text NOT NULL COLLATE NOCASE
-);
-
-CREATE UNIQUE INDEX continent_name_key ON continent ( name );
-
--- currency
-CREATE TABLE currency (
-    id text PRIMARY KEY COLLATE NOCASE, -- iso3
-    iso3 text NOT NULL UNIQUE COLLATE NOCASE,
-    name text NOT NULL COLLATE NOCASE,
-    symbol text NOT NULL
-);
-
-CREATE INDEX currency_name_idx ON currency ( name );
-CREATE INDEX currency_symbol_idx ON currency (symbol);
-
--- country
-CREATE TABLE "country" (
-    id text PRIMARY KEY COLLATE NOCASE, -- iso2
-    iso2 text NOT NULL COLLATE NOCASE,
-    iso3 text NOT NULL UNIQUE COLLATE NOCASE,
-    ison text NOT NULL,
-    name text NOT NULL UNIQUE COLLATE NOCASE,
-    official_name text NOT NULL,
-    flag text NOT NULL,
-    flag_unicode text NOT NULL,
-    continent text NOT NULL,
-    timezones json,
-    tld text,
-    postal_code_format text,
-    postal_code_regexp text,
-    calling_code text,
-    locales json,
-    languages json NOT NULL,
-    region text NOT NULL,
-    subregion text NOT NULL,
-    currencies json NOT NULL,
-    currency text,
-    coordinates json
-);
-
--- language
-CREATE TABLE language (
-    id text PRIMARY KEY COLLATE NOCASE, -- iso3
-    iso3 text NOT NULL COLLATE NOCASE,
-    iso2 text UNIQUE COLLATE NOCASE,
-    name text NOT NULL UNIQUE COLLATE NOCASE,
-    bibliographic text COLLATE NOCASE
-);
-
--- timezone
-CREATE TABLE timezone (
-    id text PRIMARY KEY COLLATE NOCASE, -- name
-    name text NOT NULL COLLATE NOCASE,
-    abbr text NOT NULL COLLATE NOCASE
-);
-
-CREATE INDEX timezone_abbr_idx ON timezone ( abbr );
-
-    ` );
-
-        for ( const source of SOURCES ) {
-            const sourcePath = SOURCE_PATH + "/" + source + ".json";
-
-            if ( !fs.existsSync( sourcePath ) ) return result( [ 404, `Source "${ source }" not found` ] );
-
-            const json = readConfig( sourcePath );
-
-            const res = dbh.do( sql`INSERT INTO`.ID( source ).VALUES( json ) );
-
-            if ( !res.ok ) return res;
-        }
-
-        dbh.destroy();
+        fs.writeFileSync( location + "/certificate.pem", res.data.certificate );
 
         return result( 200 );
+    }
+
+    // private
+    async #getCertificates () {
+        if ( !cloudflareApi ) return result( [ 500, `Cloudflare API not defined` ] );
+
+        if ( this.#res ) return this.#res;
+
+        const acme = new Acme( {
+            "provider": "letsencrypt",
+            "test": false,
+            "email": "root@softvisio.net",
+            "accountKey": null,
+        } );
+
+        const res = await acme.getCertificate( {
+            "domains": DOMAIN,
+            "createChallenge": this.#createChallenge.bind( this ),
+            "deleteChallenge": this.#deleteChallenge.bind( this ),
+        } );
+
+        this.#res = res;
+
+        return this.#res;
+    }
+
+    async #createChallenge ( { type, domain, dnsTxtRecordName, httpLocation, token, content } ) {
+        if ( type !== "dns-01" ) return false;
+
+        var res;
+
+        // get zone
+        res = await this.#getDomainZone( domain );
+        if ( !res.ok ) return false;
+
+        const zone = res.data;
+
+        // delete record, if exists
+        await this.#deleteDnsRecord( dnsTxtRecordName, zone );
+
+        // create record
+        res = await cloudflareApi.createDnsRecord( zone.id, {
+            "type": "TXT",
+            "name": dnsTxtRecordName,
+            content,
+            "ttl": 60,
+        } );
+
+        return res.ok;
+    }
+
+    async #deleteChallenge ( { type, domain, dnsTxtRecordName, token, httpLocation } ) {
+        if ( type !== "dns-01" ) return false;
+
+        var res;
+
+        // get zone
+        res = await this.#getDomainZone( domain );
+        if ( !res.ok ) return;
+
+        const zone = res.data;
+
+        await this.#deleteDnsRecord( dnsTxtRecordName, zone );
+    }
+
+    async #getDomainZone ( domain ) {
+        const res = await cloudflareApi.getZones();
+        if ( !res.ok ) return;
+
+        for ( const zone of res.data ) {
+            if ( domain === zone.name || domain.endsWith( `.${ zone.name }` ) ) {
+                return result( 200, zone );
+            }
+        }
+
+        return result( [ 404, `Domain zone not found` ] );
+    }
+
+    async #deleteDnsRecord ( dnsTxtRecordName, zone ) {
+        var res;
+
+        // get records
+        res = await cloudflareApi.getDnsRecords( zone.id );
+        if ( !res.ok ) return;
+
+        // delete record
+        for ( const record of res.data ) {
+            if ( record.type !== "TXT" ) continue;
+
+            if ( record.name !== dnsTxtRecordName ) continue;
+
+            res = await cloudflareApi.deleteDnsRecord( zone.id, record.id );
+
+            return;
+        }
     }
 }
