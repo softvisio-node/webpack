@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.64 (2024-06-20)
+
+Fixes:
+
+-   fix: build certificates
+
 ### 1.0.63 (2024-06-20)
 
 Fixes:
