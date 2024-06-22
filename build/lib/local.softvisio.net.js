@@ -49,6 +49,16 @@ export default class Datasets extends ExternalResourceBuilder {
         return result( 200 );
     }
 
+    async _getMeta () {
+        const res = await this.#getCertificates();
+        if ( !res.ok ) return;
+
+        return {
+            "expires": res.data.expires,
+            "fingerprint": res.data.fingerprint,
+        };
+    }
+
     // private
     async #getCertificates () {
         if ( !cloudflareApi ) return result( [ 500, `Cloudflare API not defined` ] );
