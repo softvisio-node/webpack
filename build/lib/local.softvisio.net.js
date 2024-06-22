@@ -32,12 +32,7 @@ export default class Datasets extends ExternalResourceBuilder {
         const res = await this.#getCertificates();
         if ( !res.ok ) return res;
 
-        const hash = this._getHash();
-
-        hash.update( res.data.certificate );
-        hash.update( res.data.privateKey );
-
-        return result( 200, hash );
+        return result( 200, res.data.fingerprint );
     }
 
     async _build ( location ) {
