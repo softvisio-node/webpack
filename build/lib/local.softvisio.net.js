@@ -4,6 +4,8 @@ import env from "#core/env";
 import Acme from "#core/api/acme";
 import Cloudflare from "#core/api/cloudflare";
 
+const ID = "softvisio-node/webpack/resources/local.softvisio.net";
+
 const DOMAIN = "local.softvisio.net";
 
 env.loadUserEnv();
@@ -22,7 +24,7 @@ export default class Datasets extends ExternalResourceBuilder {
 
     // properties
     get id () {
-        return "softvisio-node/webpack/resources/local.softvisio.net";
+        return ID;
     }
 
     // protected
