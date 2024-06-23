@@ -3,6 +3,9 @@ import fs from "node:fs";
 import env from "#core/env";
 import Acme from "#core/api/acme";
 import Cloudflare from "#core/api/cloudflare";
+import Interval from "#core/interval";
+
+const UPDATE_INTERVAL = new Interval( "2 weeks" );
 
 const ID = "softvisio-node/webpack/resources/local.softvisio.net";
 
@@ -28,7 +31,15 @@ export default class Datasets extends ExternalResourceBuilder {
     }
 
     // protected
-    async _getEtag () {
+    async _getEtag ( { etag, buildDate, meta } ) {
+        if ( meta?.expires ) {
+            const expires = new Date( meta.expires );
+
+            if ( UPDATE_INTERVAL.toDate() > expires ) {
+                return meta.fingerprint;
+            }
+        }
+
         const res = await this.#getCertificates();
         if ( !res.ok ) return res;
 
