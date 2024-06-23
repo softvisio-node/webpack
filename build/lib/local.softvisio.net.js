@@ -35,8 +35,8 @@ export default class Datasets extends ExternalResourceBuilder {
         if ( meta?.expires ) {
             const expires = new Date( meta.expires );
 
-            if ( UPDATE_INTERVAL.toDate() > expires ) {
-                return meta.fingerprint;
+            if ( UPDATE_INTERVAL.toDate() < expires ) {
+                return result( 200, meta.fingerprint );
             }
         }
 
