@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.68 (2024-07-25)
+
+Fixes:
+
+-   fix: exports
+
 ### 1.0.67 (2024-06-23)
 
 Fixes:
