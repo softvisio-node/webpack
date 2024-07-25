@@ -33,7 +33,7 @@ export default class extends WebpackComponent {
             "cache": this.webpackCacheOptions,
 
             "entry": {
-                "app": "./src",
+                "app": "@",
             },
 
             "output": {
