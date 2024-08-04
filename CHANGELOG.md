@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.0.70 (2024-08-04)
+
+Fixes:
+
+-   fix: NODE_PRESERVE_SYMLINKS removed
+
 ### 1.0.69 (2024-08-01)
 
 Fixes:
