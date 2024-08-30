@@ -26,10 +26,6 @@
     "exports": {
         ".": "./lib/webpack.js",
         "./*": "./lib/*.js",
-        "./loaders/*": [
-            "./lib/loaders/*.js",
-            "./lib/loaders/*.cjs"
-        ],
         "./resources/*": "./resources/*",
         "./webpack-components/*": "./resources/webpack-components/*/component.js"
     },
