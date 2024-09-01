@@ -29,7 +29,11 @@ export default class extends WebpackComponent {
             "mode": this.mode,
             "context": this.context,
             "devtool": this.isDevelopment ? "eval-source-map" : undefined,
-            "experiments": { "topLevelAwait": true },
+            "experiments": {
+                "asyncWebAssembly": true,
+                "layers": true,
+                "topLevelAwait": true,
+            },
             "cache": this.webpackCacheOptions,
 
             "entry": {
@@ -42,6 +46,9 @@ export default class extends WebpackComponent {
                 "filename": "js/[name].[contenthash].js",
                 "chunkFilename": "js/[name].[contenthash].js",
                 "hashDigestLength": 8,
+                "environment": {
+                    "asyncFunction": true,
+                },
             },
 
             "resolve": {
