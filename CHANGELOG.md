@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.1.0 (2024-09-01)
+
+Features:
+
+-   feat: babel parser
+
 ### 1.0.74 (2024-08-31)
 
 Fixes:
