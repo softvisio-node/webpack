@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.1.1 (2024-09-01)
+
+Fixes:
+
+-   fix: top level await warning
+
 ### 1.1.0 (2024-09-01)
 
 Features:
