@@ -71,13 +71,13 @@ export default class extends WebpackComponent {
                     "cacheGroups": {
                         "vendors": {
                             "name": "vendors",
-                            "test": /[\\/]node_modules[\\/]/,
+                            "test": /[/\\]node_modules[/\\]/,
                             "priority": -10,
                             "chunks": "initial",
                         },
                         "firebase": {
                             "name": "firebase",
-                            "test": /@firebase[\\/]/,
+                            "test": /@firebase[/\\]/,
                             "priority": -9,
                             "chunks": "all",
                         },
