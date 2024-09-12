@@ -28,7 +28,9 @@ export default class extends WebpackComponent {
             // "target": "web", "browserslist",
             "mode": this.mode,
             "context": this.context,
-            "devtool": this.isDevelopment ? "eval-source-map" : undefined,
+            "devtool": this.isDevelopment
+                ? "eval-source-map"
+                : undefined,
             "experiments": {
                 "asyncWebAssembly": true,
                 "layers": true,
