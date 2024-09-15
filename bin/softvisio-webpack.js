@@ -6,6 +6,22 @@ import childProcess from "node:child_process";
 const execArgv = new Set( process.execArgv );
 
 if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLINKS ) || !( execArgv.has( "--preserve-symlinks-main" ) || process.env.NODE_PRESERVE_SYMLINKS_MAIN ) ) {
+    console.log(
+        process.argv[ 0 ],
+        [
+
+            //
+            "--preserve-symlinks",
+            "--preserve-symlinks-main",
+            process.argv[ 1 ],
+            ...process.argv.slice( 2 ),
+        ],
+        {
+            "cwd": process.cwd(),
+            "stdio": "inherit",
+        }
+    );
+
     const res = childProcess.spawnSync(
         process.argv[ 0 ],
         [
