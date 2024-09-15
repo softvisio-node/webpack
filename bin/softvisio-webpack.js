@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import childProcess from "node:child_process";
-
 // preserve symlinks
 const execArgv = new Set( process.execArgv );
 
@@ -21,6 +19,8 @@ if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLI
             "stdio": "inherit",
         }
     );
+
+    const { "default": childProcess } = await import( "node:child_process" );
 
     const res = childProcess.spawnSync(
         process.argv[ 0 ],
