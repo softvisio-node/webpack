@@ -1,7 +1,32 @@
 #!/usr/bin/env node
 
-import CLI from "#core/cli";
-import Webpack from "#lib/webpack";
+// preserve symlinks
+const execArgv = new Set( process.execArgv );
+
+if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLINKS ) || !( execArgv.has( "--preserve-symlinks-main" ) || process.env.NODE_PRESERVE_SYMLINKS_MAIN ) ) {
+    const { "default": childProcess } = await import( "node:child_process" );
+
+    const res = childProcess.spawnSync(
+        process.argv[ 0 ],
+        [
+
+            //
+            "--preserve-symlinks",
+            "--preserve-symlinks-main",
+            process.argv[ 1 ],
+            ...process.argv.slice( 2 ),
+        ],
+        {
+            "cwd": process.cwd(),
+            "stdio": "inherit",
+        }
+    );
+
+    process.exit( res.status );
+}
+
+const { "default": Cli } = await import( "#core/cli" );
+const { "default": Webpack } = await import( "#lib/webpack" );
 
 const cli = {
     "title": "Webpack runner",
@@ -63,7 +88,7 @@ const cli = {
     },
 };
 
-await CLI.parse( cli );
+await Cli.parse( cli );
 
 const webpack = new Webpack( {
     "mode": process.cli.options.mode,
