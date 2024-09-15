@@ -8,13 +8,13 @@ if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLI
         { dirname, resolve } = await import( "node:path" ),
         { readlinkSync } = await import( "node:fs" );
 
-    let path;
+    let scriptPath;
 
     try {
-        path = resolve( dirname( process.argv[ 1 ] ), readlinkSync( process.argv[ 1 ] ) );
+        scriptPath = resolve( dirname( process.argv[ 1 ] ), readlinkSync( process.argv[ 1 ] ) );
     }
     catch {
-        path = process.argv[ 1 ];
+        scriptPath = process.argv[ 1 ];
     }
 
     const res = childProcess.spawnSync(
@@ -24,7 +24,7 @@ if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLI
             //
             "--preserve-symlinks",
             "--preserve-symlinks-main",
-            path,
+            scriptPath,
             ...process.argv.slice( 2 ),
         ],
         {
