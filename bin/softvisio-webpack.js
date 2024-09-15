@@ -5,7 +5,16 @@ const execArgv = new Set( process.execArgv );
 
 if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLINKS ) || !( execArgv.has( "--preserve-symlinks-main" ) || process.env.NODE_PRESERVE_SYMLINKS_MAIN ) ) {
     const { "default": childProcess } = await import( "node:child_process" ),
-        { statSync, readlinkSync } = await import( "node:fs" );
+        { readlinkSync } = await import( "node:fs" );
+
+    let path;
+
+    try {
+        path = readlinkSync( process.argv[ 1 ] );
+    }
+    catch {
+        path = process.argv[ 1 ];
+    }
 
     const res = childProcess.spawnSync(
         process.argv[ 0 ],
@@ -14,9 +23,7 @@ if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLI
             //
             "--preserve-symlinks",
             "--preserve-symlinks-main",
-            statSync( process.argv[ 1 ] ).issymboliclink()
-                ? readlinkSync( process.argv[ 1 ] )
-                : process.argv[ 1 ],
+            path,
             ...process.argv.slice( 2 ),
         ],
         {
