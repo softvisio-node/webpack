@@ -5,7 +5,7 @@ const execArgv = new Set( process.execArgv );
 
 if ( !( execArgv.has( "--preserve-symlinks" ) || process.env.NODE_PRESERVE_SYMLINKS ) || !( execArgv.has( "--preserve-symlinks-main" ) || process.env.NODE_PRESERVE_SYMLINKS_MAIN ) ) {
     const { "default": childProcess } = await import( "node:child_process" ),
-        { resolve } = await import( path ),
+        { resolve } = await import( "node:path" ),
         { readlinkSync } = await import( "node:fs" );
 
     let path;
