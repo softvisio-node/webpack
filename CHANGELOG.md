@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.13 (2024-09-16)
+
+Fixes:
+
+-   fix: dependencies update
+
 ### 1.2.12 (2024-09-16)
 
 Fixes:
