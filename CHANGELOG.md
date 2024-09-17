@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.2.14 (2024-09-17)
+
+Fixes:
+
+-   fix: preserve symlinks
+
 ### 1.2.13 (2024-09-16)
 
 Fixes:
