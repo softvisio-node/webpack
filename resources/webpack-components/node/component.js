@@ -96,30 +96,15 @@ export default class extends WebpackComponent {
                         "resolve": {
                             "fullySpecified": false,
                         },
-                        "oneOf": [
 
-                            // web workers *.worker.js
+                        "use": [
                             {
-                                "test": /\.worker\.[cm]?js$/,
-
-                                "type": "asset/resource",
-                                "generator": {
-                                    "filename": "[name].[hash][ext][query]",
-                                },
+                                "loader": "babel-loader",
+                                "options": this.webpackBabelOptions,
                             },
-
-                            // other *.js files
                             {
-                                "use": [
-                                    {
-                                        "loader": "babel-loader",
-                                        "options": this.webpackBabelOptions,
-                                    },
-                                    {
-                                        "loader": "webpack-preprocessor-loader",
-                                        "options": this.webpackPreprocessorOptions,
-                                    },
-                                ],
+                                "loader": "webpack-preprocessor-loader",
+                                "options": this.webpackPreprocessorOptions,
                             },
                         ],
                     },
@@ -134,14 +119,11 @@ export default class extends WebpackComponent {
 
             "plugins": [
 
-                // new MiniCssExtractPlugin( {
-                //     "filename": "css/[name].[contenthash].css",
-                //     "chunkFilename": "css/[name].[contenthash].css",
-                // } ),
                 // new webpack.DefinePlugin( {
                 //     "process.env": this.webpackProcessEnv,
                 //     "process._APP_CONFIG_PLACEHOLDER": this.webpackAppConfig,
                 // } ),
+                //
                 // new CopyPlugin( {
                 //     "patterns": [
                 //         {

@@ -72,7 +72,9 @@ export default class extends WebpackComponent {
                 "modules": this.webpackResolveModules,
             },
 
-            "resolveLoader": { "modules": this.webpackResolveLoaderModules },
+            "resolveLoader": {
+                "modules": this.webpackResolveLoaderModules,
+            },
 
             "optimization": {
                 "minimizer": [ this.webpackTerserPlugin ],
@@ -117,6 +119,7 @@ export default class extends WebpackComponent {
                         } );
                     },
                 },
+
                 new webpack.DefinePlugin( {
                     "process.env": this.webpackProcessEnv,
                     "process._APP_CONFIG_PLACEHOLDER": this.webpackAppConfig,
