@@ -67,7 +67,7 @@ export default class extends WebpackComponent {
                     "crypto": false,
                 },
 
-                "extensions": [ ".mjs", ".js", ".jsx", ".vue", ".json", ".wasm" ],
+                "extensions": [ ".js", ".mjs", ".cjs", ".json", ".yaml", ".wasm" ],
 
                 "modules": this.webpackResolveModules,
             },
