@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.3.0 (2024-09-19)
+
+Features:
+
+-   feat: node component
+-   feat: web component
+
 ### 1.2.14 (2024-09-17)
 
 Fixes:
