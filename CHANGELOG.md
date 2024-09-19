@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.3.2 (2024-09-19)
+
+Fixes:
+
+-   fix: webpack config
+
 ### 1.3.1 (2024-09-19)
 
 Fixes:
