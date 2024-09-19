@@ -4,7 +4,7 @@
 
 # Introduction
 
-<!-- Tell about the project -->
+`webpack` config components.
 
 ## Install
 
@@ -14,4 +14,6 @@ npm i @softvisio/webpack
 
 ## Usage
 
-<!-- Tell about how to use the project, give code examples -->
+```shell
+softvisio-webpack --help
+```
