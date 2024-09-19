@@ -41,6 +41,9 @@
     "scripts": {
         "install": "node bin/install.js"
     },
+    "dependencies": {
+        "node-loader": "^2.0.0"
+    },
     "peerDependencies": {
         "@softvisio/babel": "^1.0.0",
         "@softvisio/core": "^7.101.6",
