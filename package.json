@@ -41,9 +41,6 @@
     "scripts": {
         "install": "node bin/install.js"
     },
-    "dependencies": {
-        "node-loader": "^2.0.0"
-    },
     "peerDependencies": {
         "@softvisio/babel": "^1.0.0",
         "@softvisio/core": "^7.101.6",
@@ -53,6 +50,7 @@
         "css-minimizer-webpack-plugin": "^7.0.0",
         "html-webpack-plugin": "^5.3.2",
         "mini-css-extract-plugin": "^2.0.0",
+        "node-loader": "^2.0.0",
         "postcss-loader": "^8.0.0",
         "terser-webpack-plugin": "^5.2.4",
         "vue": "^3.4.30",
