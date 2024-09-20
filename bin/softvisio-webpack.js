@@ -116,6 +116,13 @@ async function preserveSymlinks ( { preserveSymlinksMain = true } = {} ) {
             ],
             {
                 "cwd": process.cwd(),
+                "env": {
+                    ...process.env,
+                    "NODE_PRESERVE_SYMLINKS": "1",
+                    "NODE_PRESERVE_SYMLINKS_MAIN": preserveSymlinksMain
+                        ? ""
+                        : "1",
+                },
                 "stdio": "inherit",
             }
         );
