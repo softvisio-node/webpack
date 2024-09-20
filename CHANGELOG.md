@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.3.3 (2024-09-20)
+
+Fixes:
+
+-   fix: preserve symlinks env
+
 ### 1.3.2 (2024-09-19)
 
 Fixes:
