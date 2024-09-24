@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.4.0 (2024-09-24)
+
+Features:
+
+-   feat: clear cache option
+
+Fixes:
+
+-   fix: build deps cache
+
 ### 1.3.3 (2024-09-20)
 
 Fixes:
