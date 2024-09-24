@@ -15,7 +15,7 @@ const cli = {
             "schema": { "type": "string", "enum": [ "development", "production" ] },
         },
         "cordova": {
-            "short": "c",
+            "short": null,
             "description": "build for cordova",
             "default": false,
             "schema": { "type": "boolean" },
@@ -27,14 +27,13 @@ const cli = {
             "schema": { "type": "boolean" },
         },
         "cache": {
-
-            // "short": "C",
+            "short": "C",
             "description": `disable webpack cache`,
             "default": true,
             "schema": { "type": "boolean" },
         },
         "clear-cache": {
-            "short": "r",
+            "short": "c",
             "description": `clear webpack cache`,
             "default": false,
             "schema": { "type": "boolean" },
