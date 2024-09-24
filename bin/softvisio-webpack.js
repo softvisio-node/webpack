@@ -12,6 +12,7 @@ const cli = {
         "mode": {
             "short": "m",
             "description": `environment mode`,
+            "default": "production",
             "schema": { "enum": [ "development", "production" ] },
         },
         "cordova": {
