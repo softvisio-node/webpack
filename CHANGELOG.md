@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.4.1 (2024-09-24)
+
+Fixes:
+
+-   fix: cache options
+-   fix: cli options
+
 ### 1.4.0 (2024-09-24)
 
 Features:
