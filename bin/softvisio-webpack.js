@@ -65,9 +65,9 @@ const cli = {
     },
     "arguments": {
         "command": {
-            "description": `One of: "dev", "build", "dump"`,
+            "description": "Command to run.",
             "required": true,
-            "schema": { "type": "string", "enum": [ "dev", "build", "dump" ] },
+            "schema": { "enum": [ "dev", "build", "dump" ] },
         },
     },
 };
