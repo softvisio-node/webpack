@@ -11,7 +11,7 @@ const cli = {
     "options": {
         "mode": {
             "short": "m",
-            "description": `environment mode`,
+            "description": `Environment mode.`,
             "default": "production",
             "schema": { "enum": [ "development", "production" ] },
         },
