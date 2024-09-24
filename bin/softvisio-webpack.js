@@ -12,10 +12,10 @@ const cli = {
         "mode": {
             "short": "m",
             "description": `can be "development" or "production"`,
-            "schema": { "type": "string", "enum": [ "development", "production" ] },
+            "schema": { "enum": [ "development", "production" ] },
         },
         "cordova": {
-            "short": null,
+            "short": false,
             "description": "build for cordova",
             "default": false,
             "schema": { "type": "boolean" },
