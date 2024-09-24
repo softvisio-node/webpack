@@ -33,6 +33,12 @@ const cli = {
             "default": true,
             "schema": { "type": "boolean" },
         },
+        "clear-cache": {
+            "short": "r",
+            "description": `clear webpack cache`,
+            "default": false,
+            "schema": { "type": "boolean" },
+        },
         "listen": {
             "short": "l",
             "description": `Development server listen IP address.`,
@@ -73,6 +79,7 @@ const webpack = new Webpack( {
     "command": process.cli.arguments.command,
     "useAnalyzer": process.cli.options.analyzer,
     "useCache": process.cli.options.cache,
+    "clearCache": process.cli.options[ "clear-cache" ],
     "buildCordova": process.cli.options.cordova,
     "listen": process.cli.options.listen,
     "httpPort": process.cli.options[ "http-port" ],
