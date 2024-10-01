@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.4.2 (2024-10-01)
+
+Fixes:
+
+-   fix: certs build moved to core
+-   fix: webpack config
+
 ### 1.4.1 (2024-09-24)
 
 Fixes:
