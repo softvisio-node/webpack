@@ -74,9 +74,8 @@ const cli = {
 
 await Cli.parse( cli );
 
-const webpack = new Webpack( {
+const webpack = new Webpack( process.cli.arguments.command, {
     "mode": process.cli.options.mode,
-    "command": process.cli.arguments.command,
     "useAnalyzer": process.cli.options.analyzer,
     "useCache": process.cli.options.cache,
     "clearCache": process.cli.options[ "clear-cache" ],
