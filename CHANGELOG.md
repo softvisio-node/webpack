@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.4.4 (2024-10-03)
+
+Fixes:
+
+-   fix: config builder
+
 ### 1.4.3 (2024-10-03)
 
 No notable changes since the previous release.
