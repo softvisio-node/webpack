@@ -1,8 +1,8 @@
-import WebpackComponent from "#lib/component";
-import webpack from "webpack";
 import fs from "node:fs";
 import path from "node:path";
+import webpack from "webpack";
 import { TmpDir } from "#core/tmp";
+import WebpackComponent from "#lib/component";
 
 export default class extends WebpackComponent {
     #tmpPath = new TmpDir();

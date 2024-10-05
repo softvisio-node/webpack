@@ -1,13 +1,13 @@
-import WebpackComponent from "#lib/component";
-import webpack from "webpack";
-import { VueLoaderPlugin } from "vue-loader";
-import HtmlPlugin from "html-webpack-plugin";
 import CopyPlugin from "copy-webpack-plugin";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
-import PoFile from "#core/locale/po-file";
+import HtmlPlugin from "html-webpack-plugin";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import { VueLoaderPlugin } from "vue-loader";
+import webpack from "webpack";
 import json5 from "#core/json5";
+import PoFile from "#core/locale/po-file";
 import yaml from "#core/yaml";
+import WebpackComponent from "#lib/component";
 
 export default class extends WebpackComponent {
 
