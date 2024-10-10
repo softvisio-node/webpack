@@ -4,7 +4,6 @@
 await preserveSymlinks();
 
 const { "default": Cli } = await import( "#core/cli" );
-const { "default": Webpack } = await import( "#lib/webpack" );
 
 const cli = {
     "title": "Webpack runner",
@@ -73,6 +72,8 @@ const cli = {
 };
 
 await Cli.parse( cli );
+
+const { "default": Webpack } = await import( "#lib/webpack" );
 
 const webpack = new Webpack( process.cli.arguments.command, {
     "mode": process.cli.options.mode,
