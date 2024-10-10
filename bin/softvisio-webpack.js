@@ -59,7 +59,7 @@ const cli = {
         },
         "proxy-url": {
             "short": false,
-            "description": `Proxy URL.`,
+            "description": `proxy URL`,
             "schema": { "type": "string", "format": "uri" },
         },
     },
