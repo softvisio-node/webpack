@@ -1,6 +1,6 @@
 <!-- !!! DO NOT EDIT, THIS FILE IS GENERATED AUTOMATICALLY !!!  -->
 
-> :information_source: Please, see the full project documentation here: [https://softvisio-node.github.io/webpack/](https://softvisio-node.github.io/webpack/).
+> :information_source: Please, see the full project documentation here:<br>[https://softvisio-node.github.io/webpack/](https://softvisio-node.github.io/webpack/)
 
 # Introduction
 
@@ -9,7 +9,7 @@
 ## Install
 
 ```shell
-npm i @softvisio/webpack
+npm install @softvisio/webpack
 ```
 
 ## Usage

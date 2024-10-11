@@ -5,7 +5,7 @@
 ## Install
 
 ```shell
-npm i @softvisio/webpack
+npm install @softvisio/webpack
 ```
 
 ## Usage
