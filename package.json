@@ -38,6 +38,9 @@
         "/resources",
         "/src"
     ],
+    "scripts": {
+        "publish": "softvisio-cli package publish"
+    },
     "peerDependencies": {
         "@softvisio/babel": "^1.0.0",
         "@softvisio/core": "^7.101.6",
