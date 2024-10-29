@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.4.10 (2024-10-29)
+
+Other changes:
+
+-   chore: update docs
+
+[Compare with the previous release: v1.4.9 ... v1.4.10](https://github.com/softvisio-node/webpack/compare/v1.4.9...v1.4.10)
+
 ### 1.4.9 (2024-10-20)
 
 No notable changes since the previous release.
