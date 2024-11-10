@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.4.12 (2024-11-10)
+
+Other changes:
+
+-   chore: chmod files
+
+[Compare with the previous release: v1.4.11 ... v1.4.12](https://github.com/softvisio-node/webpack/compare/v1.4.11...v1.4.12)
+
 ### 1.4.11 (2024-11-07)
 
 Other changes:
