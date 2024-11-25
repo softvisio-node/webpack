@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.4.13 (2024-11-25)
+
+Other changes:
+
+-   chore: update certificates resource
+
+[Compare with the previous release: v1.4.12 ... v1.4.13](https://github.com/softvisio-node/webpack/compare/v1.4.12...v1.4.13)
+
 ### 1.4.12 (2024-11-10)
 
 Other changes:
