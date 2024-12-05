@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.4.16 (2024-12-05)
+
+Other changes:
+
+- chore: update local certificates names
+
+[Compare with the previous release: v1.4.15 ... v1.4.16](https://github.com/softvisio-node/webpack/compare/v1.4.15...v1.4.16)
+
 ### 1.4.15 (2024-11-27)
 
 Other changes:
