@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.4.17 (2024-12-07)
+
+Other changes:
+
+- chore: set yaml indent to 4 spaces
+
+[Compare with the previous release: v1.4.16 ... v1.4.17](https://github.com/softvisio-node/webpack/compare/v1.4.16...v1.4.17)
+
 ### 1.4.16 (2024-12-05)
 
 Other changes:
