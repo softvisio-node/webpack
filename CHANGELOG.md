@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.4.18 (2024-12-27)
+
+Other changes:
+
+- chore: add tls dhparam
+- chore: refactor certificates
+- chore: update crypto module
+
+[Compare with the previous release: v1.4.17 ... v1.4.18](https://github.com/softvisio-node/webpack/compare/v1.4.17...v1.4.18)
+
 ### 1.4.17 (2024-12-07)
 
 Other changes:
