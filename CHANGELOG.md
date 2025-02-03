@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.0 (2025-02-03)
+
+Features:
+
+- feat: refactor read / write config
+
+Compare with the previous release: [`v1.4.19...v1.5.0`](https://github.com/softvisio-node/webpack/compare/v1.4.19...v1.5.0)
+
 ### 1.4.19 (2025-01-08)
 
 Other changes:
