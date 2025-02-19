@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.1 (2025-02-19)
+
+Other changes:
+
+- chore: update cli config
+
+Compare with the previous release: [`v1.5.0...v1.5.1`](https://github.com/softvisio-node/webpack/compare/v1.5.0...v1.5.1)
+
 ### 1.5.0 (2025-02-03)
 
 Features:
