@@ -5,27 +5,27 @@
 
 - $id: build
   anyOf:
-      - type: "null"
-      - type: object
-        properties:
-            webpackDevServer:
-                anyOf:
-                    - type: "null"
-                    - type: object
-                      properties:
-                          proxyUrl: { type: string, format: uri }
-                          https:
-                              type: object
-                              properties:
-                                  domain: { type: ["null", string] }
-                                  cert: { type: ["null", string] }
-                                  key: { type: ["null", string] }
-                              additionalProperties: false
+    - type: "null"
+    - type: object
+      properties:
+        webpackDevServer:
+          anyOf:
+            - type: "null"
+            - type: object
+              properties:
+                proxyUrl: { type: string, format: uri }
+                https:
+                  type: object
+                  properties:
+                    domain: { type: ["null", string] }
+                    cert: { type: ["null", string] }
+                    key: { type: ["null", string] }
+                  additionalProperties: false
 
-                      additionalProperties: false
-                      required: []
+              additionalProperties: false
+              required: []
 
-        required: []
+      required: []
 
 - $id: config
   type: ["null", object]
