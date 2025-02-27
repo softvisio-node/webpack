@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.3 (2025-02-27)
+
+Other changes:
+
+- chore: add editorconfig yaml
+
+Compare with the previous release: [`v1.5.2...v1.5.3`](https://github.com/softvisio-node/webpack/compare/v1.5.2...v1.5.3)
+
 ### 1.5.2 (2025-02-26)
 
 Other changes:
