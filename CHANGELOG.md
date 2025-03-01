@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.4 (2025-03-01)
+
+Other changes:
+
+- chore: bump dependencies
+
+Compare with the previous release: [`v1.5.3...v1.5.4`](https://github.com/softvisio-node/webpack/compare/v1.5.3...v1.5.4)
+
 ### 1.5.3 (2025-02-27)
 
 Other changes:
