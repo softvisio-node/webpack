@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.5 (2025-03-04)
+
+Other changes:
+
+- chore: update package metadata
+
+Compare with the previous release: [`v1.5.4...v1.5.5`](https://github.com/softvisio-node/webpack/compare/v1.5.4...v1.5.5)
+
 ### 1.5.4 (2025-03-01)
 
 Other changes:
