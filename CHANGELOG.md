@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.7 (2025-03-16)
+
+Other changes:
+
+- chore: enabled ajv strict mode
+
+Compare with the previous release: [`v1.5.6...v1.5.7`](https://github.com/softvisio-node/webpack/compare/v1.5.6...v1.5.7)
+
 ### 1.5.6 (2025-03-04)
 
 Other changes:
