@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.8 (2025-03-26)
+
+Other changes:
+
+- chore: update markdown code tags
+
+Compare with the previous release: [`v1.5.7...v1.5.8`](https://github.com/softvisio-node/webpack/compare/v1.5.7...v1.5.8)
+
 ### 1.5.7 (2025-03-16)
 
 Other changes:
