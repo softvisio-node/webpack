@@ -8,12 +8,12 @@
 
 ## Install
 
-```shell
+```sh
 npm install @softvisio/webpack
 ```
 
 ## Usage
 
-```shell
+```sh
 softvisio-webpack --help
 ```
