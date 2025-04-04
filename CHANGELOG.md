@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.9 (2025-04-04)
+
+Other changes:
+
+- chore: fix env config validation
+
+Compare with the previous release: [`v1.5.8...v1.5.9`](https://github.com/softvisio-node/webpack/compare/v1.5.8...v1.5.9)
+
 ### 1.5.8 (2025-03-26)
 
 Other changes:
