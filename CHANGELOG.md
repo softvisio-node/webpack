@@ -1,5 +1,13 @@
 # Changelog
 
+### 1.5.10 (2025-04-23)
+
+Other changes:
+
+- chore: update component constructor
+
+Compare with the previous release: [`v1.5.9...v1.5.10`](https://github.com/softvisio-node/webpack/compare/v1.5.9...v1.5.10)
+
 ### 1.5.9 (2025-04-04)
 
 Other changes:
