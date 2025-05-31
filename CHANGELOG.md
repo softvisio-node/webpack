@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.5.11 (2025-05-31)
+
+**Other changes:**
+
+- \[PATCH] chore: linkify devserver listen url (👬 zdm)
+
+Compare with the previous release: [`v1.5.10...v1.5.11`](https://github.com/softvisio-node/webpack/compare/v1.5.10...v1.5.11)
+
 ### 1.5.10 (2025-04-23)
 
 Other changes:
