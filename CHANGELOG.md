@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.5.12 (2025-06-01)
+
+**Other changes:**
+
+- \[PATCH] chore: update docs (👬 zdm)
+
+Compare with the previous release: [v1.5.11](https://github.com/softvisio-node/webpack/compare/v1.5.11...v1.5.12)
+
 ### v1.5.11 (2025-05-31)
 
 **Other changes:**
