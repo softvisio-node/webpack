@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.5.13 (2025-06-07)
+
+**Other changes:**
+
+- \[PATCH] chore: update cli config (👬 zdm)
+
+Compare with the previous release: [v1.5.12](https://github.com/softvisio-node/webpack/compare/v1.5.12...v1.5.13)
+
 ### v1.5.12 (2025-06-01)
 
 **Other changes:**
