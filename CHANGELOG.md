@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.0 (2025-06-09)
+
+**Features:**
+
+- \[MINOR] feat: rename GIT_ID to BUILD_VERSION (👬 zdm)
+
+Compare with the previous release: [v1.5.13](https://github.com/softvisio-node/webpack/compare/v1.5.13...v1.6.0)
+
 ### v1.5.13 (2025-06-07)
 
 **Other changes:**
