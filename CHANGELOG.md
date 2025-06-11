@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.1 (2025-06-11)
+
+**Refactoring:**
+
+- \[PATCH] refactor: rename ansi classs (● db8d403; 👬 zdm)
+
+Compare with the previous release: [v1.6.0](https://github.com/softvisio-node/webpack/compare/v1.6.0...v1.6.1)
+
 ### v1.6.0 (2025-06-09)
 
 **Features:**
