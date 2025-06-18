@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.2 (2025-06-18)
+
+**Other changes:**
+
+- style: fix empty console log (● [5611999](https://github.com/softvisio-node/webpack/commit/5611999); 👬 zdm)
+
+Compare with the previous release: [v1.6.1](https://github.com/softvisio-node/webpack/compare/v1.6.1...v1.6.2)
+
 ### v1.6.1 (2025-06-11)
 
 **Refactoring:**
