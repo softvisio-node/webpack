@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.3-alpha.0 (2025-07-01)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: add cli negated shorts (● [a4edbd5](https://github.com/softvisio-node/webpack/commit/a4edbd5); 👬 zdm)
+
+Compare with the previous release: [v1.6.2](https://github.com/softvisio-node/webpack/compare/v1.6.2...v1.6.3-alpha.0)
+
 ### v1.6.2 (2025-06-18)
 
 **Other changes:**
