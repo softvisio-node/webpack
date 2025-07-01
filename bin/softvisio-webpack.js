@@ -27,7 +27,7 @@ const cli = {
             "schema": { "type": "boolean" },
         },
         "cache": {
-            "short": "C",
+            "negatedShort": "C",
             "description": `disable webpack cache`,
             "default": true,
             "schema": { "type": "boolean" },
