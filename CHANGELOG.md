@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.3-alpha.1 (2025-07-01)
+
+**Other changes:**
+
+- build(deps): bump @softvisio/core 7.172.0-alpha.0 (● [191fb4b](https://github.com/softvisio-node/webpack/commit/191fb4b); 👬 zdm)
+
+Compare with the previous release: [v1.6.3-alpha.0](https://github.com/softvisio-node/webpack/compare/v1.6.3-alpha.0...v1.6.3-alpha.1)
+
 ### v1.6.3-alpha.0 (2025-07-01)
 
 **Code refactoring:**
