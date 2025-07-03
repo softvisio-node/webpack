@@ -1,5 +1,31 @@
 # Changelog
 
+### v1.6.3 (2025-07-03)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: add cli negated shorts (● [a4edbd5](https://github.com/softvisio-node/webpack/commit/a4edbd5); 👬 zdm)
+
+**Other changes:**
+
+- build(deps): bump @softvisio/core 7.172.0 (● [5c6857e](https://github.com/softvisio-node/webpack/commit/5c6857e); 👬 zdm)
+
+- build(deps): bump @softvisio/core 7.172.0-alpha.0 (● [191fb4b](https://github.com/softvisio-node/webpack/commit/191fb4b); 👬 zdm)
+
+- build(deps): bump @softvisio/core 7.172.0-alpha.1 (● [73eae03](https://github.com/softvisio-node/webpack/commit/73eae03); 👬 zdm)
+
+- style: use uppercase crypto constants (● [4006240](https://github.com/softvisio-node/webpack/commit/4006240); 👬 zdm)
+
+**Included pre-releases:**
+
+- build(release): release v1.6.3-alpha.0 (● [aa7ec22](https://github.com/softvisio-node/webpack/commit/aa7ec22); 👬 zdm)
+
+- build(release): release v1.6.3-alpha.1 (● [9cb6a91](https://github.com/softvisio-node/webpack/commit/9cb6a91); 👬 zdm)
+
+- build(release): release v1.6.3-alpha.2 (● [2926244](https://github.com/softvisio-node/webpack/commit/2926244); 👬 zdm)
+
+Compare with the previous release: [v1.6.2](https://github.com/softvisio-node/webpack/compare/v1.6.2...v1.6.3)
+
 ### v1.6.3-alpha.2 (2025-07-01)
 
 **Other changes:**
