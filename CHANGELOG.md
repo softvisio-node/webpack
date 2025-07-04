@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.4 (2025-07-04)
+
+**Bug fixes:**
+
+- \[PATCH] fix: fix url format in schemas (● [7aaed61](https://github.com/softvisio-node/webpack/commit/7aaed61); 👬 zdm)
+
+Compare with the previous release: [v1.6.3](https://github.com/softvisio-node/webpack/compare/v1.6.3...v1.6.4)
+
 ### v1.6.3 (2025-07-03)
 
 **Code refactoring:**
