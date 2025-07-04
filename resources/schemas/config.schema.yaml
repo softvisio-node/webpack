@@ -13,7 +13,7 @@
             - type: "null"
             - type: object
               properties:
-                proxyUrl: { type: string, format: uri }
+                proxyUrl: { type: string, format: url }
                 https:
                   type: object
                   properties:
