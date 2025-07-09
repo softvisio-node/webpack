@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.5 (2025-07-09)
+
+**Bug fixes:**
+
+- \[PATCH] fix: destroy dev server proxy stream (● [f2e3f98](https://github.com/softvisio-node/webpack/commit/f2e3f98); 👬 zdm)
+
+Compare with the previous release: [v1.6.4](https://github.com/softvisio-node/webpack/compare/v1.6.4...v1.6.5)
+
 ### v1.6.4 (2025-07-04)
 
 **Bug fixes:**
