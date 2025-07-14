@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.6 (2025-07-14)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: make build status blink (● [e7e5378](https://github.com/softvisio-node/webpack/commit/e7e5378); 👬 zdm)
+
+Compare with the previous release: [v1.6.5](https://github.com/softvisio-node/webpack/compare/v1.6.5...v1.6.6)
+
 ### v1.6.5 (2025-07-09)
 
 **Bug fixes:**
