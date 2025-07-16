@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.7 (2025-07-16)
+
+**Other changes:**
+
+- docs: update (● [5b727ae](https://github.com/softvisio-node/webpack/commit/5b727ae); 👬 zdm)
+
+Compare with the previous release: [v1.6.6](https://github.com/softvisio-node/webpack/compare/v1.6.6...v1.6.7)
+
 ### v1.6.6 (2025-07-14)
 
 **Code refactoring:**
