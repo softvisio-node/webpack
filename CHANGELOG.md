@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.8 (2025-07-16)
+
+**Other changes:**
+
+- style: lint (● [890c67e](https://github.com/softvisio-node/webpack/commit/890c67e); 👬 zdm)
+
+Compare with the previous release: [v1.6.7](https://github.com/softvisio-node/webpack/compare/v1.6.7...v1.6.8)
+
 ### v1.6.7 (2025-07-16)
 
 **Other changes:**
