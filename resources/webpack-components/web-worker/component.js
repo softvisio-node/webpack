@@ -19,11 +19,11 @@ export default class extends WebpackComponent {
     }
 
     get webpackEntryImport () {
-        throw `webpackEntryImport is required`;
+        throw "webpackEntryImport is required";
     }
 
     get webpackEntryFilename () {
-        throw `webpackEntryFilename is required`;
+        throw "webpackEntryFilename is required";
     }
 
     // public
