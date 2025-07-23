@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.11 (2025-07-23)
+
+**Other changes:**
+
+- style: update .npmrc (● [3211e73](https://github.com/softvisio-node/webpack/commit/3211e73); 👬 zdm)
+
+Compare with the previous release: [v1.6.10](https://github.com/softvisio-node/webpack/compare/v1.6.10...v1.6.11)
+
 ### v1.6.10 (2025-07-23)
 
 **Bug fixes:**
