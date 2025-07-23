@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.10 (2025-07-23)
+
+**Bug fixes:**
+
+- \[PATCH] fix: update editorconfig (● [782937b](https://github.com/softvisio-node/webpack/commit/782937b); 👬 zdm)
+
+Compare with the previous release: [v1.6.9](https://github.com/softvisio-node/webpack/compare/v1.6.9...v1.6.10)
+
 ### v1.6.9 (2025-07-22)
 
 **Bug fixes:**
