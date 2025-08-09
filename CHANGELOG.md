@@ -1,5 +1,15 @@
 # Changelog
 
+### v1.6.12 (2025-08-09)
+
+**Code refactoring:**
+
+- \[PATCH] refactor: update json5 api (● [c01d08e](https://github.com/softvisio-node/webpack/commit/c01d08e); 👬 zdm)
+
+- \[PATCH] refactor: update yaml api (● [019e68f](https://github.com/softvisio-node/webpack/commit/019e68f), [ae13f25](https://github.com/softvisio-node/webpack/commit/ae13f25); 👬 zdm)
+
+Compare with the previous release: [v1.6.11](https://github.com/softvisio-node/webpack/compare/v1.6.11...v1.6.12)
+
 ### v1.6.11 (2025-07-23)
 
 **Other changes:**
