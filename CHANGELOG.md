@@ -1,5 +1,13 @@
 # Changelog
 
+### v1.6.13 (2025-08-10)
+
+**Other changes:**
+
+- build(deps): bind webpack to \~5.100.2 (● [8b500e8](https://github.com/softvisio-node/webpack/commit/8b500e8); 👬 zdm)
+
+Compare with the previous release: [v1.6.12](https://github.com/softvisio-node/webpack/compare/v1.6.12...v1.6.13)
+
 ### v1.6.12 (2025-08-09)
 
 **Code refactoring:**
